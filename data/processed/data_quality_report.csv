@@ -1,0 +1,12 @@
+Check,Rows,PercentOfRows,Treatment,BusinessReasonAndBenefit
+Rows preserved,541909,100.0,Every input row remains in the processed dataset.,Maintains auditability and prevents silent information loss.
+Missing CustomerID,135080,24.9267,Original null is retained; CustomerKey receives an invoice-level GUEST surrogate.,Guest sales remain visible while RFM excludes unidentified shoppers to avoid false customer histories.
+Missing Description,1454,0.2683,Original null is retained; DescriptionClean uses UNKNOWN PRODUCT plus StockCode.,Revenue stays reconciled and the product remains traceable without pretending to know its name.
+Missing / invalid date,0,0.0,Original date is retained; the row is flagged and excluded only from time-dependent models.,Prevents fabricated timing while preserving the commercial record.
+Exact duplicate rows,10147,1.8725,All copies are retained and ranked; only rank 1 receives analytical revenue weight.,Avoids double-counting KPIs without deleting potentially auditable records.
+Cancelled invoices,9288,1.7139,Retained and classified as Return / Cancellation.,Supports return-risk and net-revenue analysis.
+Negative quantity,10624,1.9605,Retained as a return signal; absolute value contributes to ReturnValue.,"Turns reversals into a service, product-quality, and margin insight."
+Zero quantity,0,0.0,Retained and marked Zero Quantity.,Preserves operational adjustments without treating them as demand.
+Negative price,2,0.0004,Retained and marked Negative Price Adjustment.,Keeps accounting adjustments visible and out of gross-sales demand.
+Zero price,2515,0.4641,Retained and marked Zero Price / Free Item.,"Allows monitoring of samples, promotions, and data-entry leakage."
+Analysis-ready positive sales,524878,96.8572,Used for gross-sales and demand KPIs; source rows outside this cohort remain available.,Creates decision-grade metrics without destructive cleaning.

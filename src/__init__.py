@@ -1,0 +1,2 @@
+"""Shopper Spectrum analytics package."""
+

@@ -1,0 +1,20 @@
+{
+  "source": "Google Drive link embedded in project_brief.pdf",
+  "rows": 541909,
+  "columns_original": 8,
+  "columns_processed": 42,
+  "row_retention_percent": 100.0,
+  "date_min": "2022-12-01T08:26:00",
+  "date_max": "2023-12-09T12:50:00",
+  "countries": 38,
+  "identified_customers": 4338,
+  "products": 5154,
+  "invoices": 25900,
+  "gross_revenue": 10642110.804000001,
+  "return_value": 893979.73,
+  "net_revenue": 9748131.074000001,
+  "selected_k": 4,
+  "selected_k_silhouette": 0.3339182058421721,
+  "selected_k_inertia": 3925.2744726728542,
+  "selection_reason": "K=4 balances measured separation with four operationally distinct CRM treatments."
+}

@@ -1,0 +1,6 @@
+BasketBand,Orders,AverageBasketValue,AverageUnits,AverageDistinctProducts
+Under £25,1065,11.68,7.32,2.06
+£25-£75,1055,48.84,30.26,4.31
+£75-£150,2783,115.82,69.16,11.36
+£150-£500,10153,300.1,181.2,20.66
+£500+,4904,1470.01,713.81,55.3

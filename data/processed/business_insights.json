@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Retail health pulse",
+    "finding": "The preserved ledger contains 541,909 lines and 25,900 invoices, producing gross revenue of £10,642,111 and net revenue of £9,748,131 after £893,980 in returns.",
+    "business_action": "Track gross, returns, net revenue, AOV, customers, and order volume together; growth that raises returns is not healthy growth."
+  },
+  {
+    "id": 2,
+    "title": "Market concentration",
+    "finding": "United Kingdom is the largest market in the current data with £9,001,744 gross revenue.",
+    "business_action": "Protect the core market while building an international growth shortlist using both revenue scale and return quality."
+  },
+  {
+    "id": 3,
+    "title": "Seasonality and momentum",
+    "finding": "The strongest observed month is 2023-11 at £1,503,867 revenue.",
+    "business_action": "Bring inventory, staffing, and campaign launches forward by one replenishment lead time before the peak."
+  },
+  {
+    "id": 4,
+    "title": "Weekday demand",
+    "finding": "Friday generates the highest gross revenue in this transaction history.",
+    "business_action": "Schedule email, paid media, and warehouse labor around the observed high-response days."
+  },
+  {
+    "id": 5,
+    "title": "Trading-hour intensity",
+    "finding": "The peak purchase hour is 10:00 with £1,444,815 revenue.",
+    "business_action": "Concentrate flash offers and live support coverage around the highest-intent hours."
+  },
+  {
+    "id": 6,
+    "title": "Product winners",
+    "finding": "REGENCY CAKESTAND 3 TIER leads the revenue ranking at £174,157.",
+    "business_action": "Keep winners in stock, feature them in acquisition creative, and use them as anchors for cross-sell bundles."
+  },
+  {
+    "id": 7,
+    "title": "Product portfolio roles",
+    "finding": "The velocity-value matrix separates traffic drivers, premium earners, scalable stars, and low-priority long-tail items.",
+    "business_action": "Apply different inventory and merchandising rules by quadrant instead of one blanket reorder policy."
+  },
+  {
+    "id": 8,
+    "title": "Product return exposure",
+    "finding": "PAPER CRAFT , LITTLE BIRDIE has the largest material return exposure among adequately supported products.",
+    "business_action": "Audit listing accuracy, packaging, supplier quality, and customer expectations for high-value/high-rate return items."
+  },
+  {
+    "id": 9,
+    "title": "Market return exposure",
+    "finding": "United Kingdom is the most material market-level return watchpoint in the ranked view.",
+    "business_action": "Review delivery promises, carrier performance, duties, and localisation for high-return markets."
+  },
+  {
+    "id": 10,
+    "title": "Basket economics",
+    "finding": "Basket distribution reveals typical orders, large commercial baskets, and the tail that can distort averages.",
+    "business_action": "Use median basket value for everyday targets and separate approval/service rules for extreme baskets."
+  },
+  {
+    "id": 11,
+    "title": "Customer revenue concentration",
+    "finding": "The top 20% of identified customers contribute 74.8% of identified-customer revenue.",
+    "business_action": "Create a tiered retention programme, but avoid concentrating service only on current elites; nurture the next-value band too."
+  },
+  {
+    "id": 12,
+    "title": "New versus repeat growth",
+    "finding": "Monthly new-versus-repeat revenue separates acquisition-led spikes from durable customer relationships.",
+    "business_action": "Judge campaigns on second-purchase conversion and repeat revenue, not only first-order sales."
+  },
+  {
+    "id": 13,
+    "title": "Segment portfolio",
+    "finding": "Champions is the largest revenue segment, contributing 64.9% of identified-customer value.",
+    "business_action": "Assign a distinct CRM treatment, offer depth, and contact cadence to every segment."
+  },
+  {
+    "id": 14,
+    "title": "Segment behaviour",
+    "finding": "Segment profiles compare recency, frequency, monetary value, AOV, and cadence rather than relying on a cluster number.",
+    "business_action": "Use profile differences to set measurable segment-specific goals and guardrails."
+  },
+  {
+    "id": 15,
+    "title": "At-risk recovery",
+    "finding": "At-risk customers represent £557,121 in historical customer value.",
+    "business_action": "Prioritise win-back by value at risk and product affinity; use a stepped incentive instead of an immediate blanket discount."
+  },
+  {
+    "id": 16,
+    "title": "Purchase cadence",
+    "finding": "Customer cadence shows when a next purchase becomes late relative to the shopper's own pattern.",
+    "business_action": "Trigger reminders from expected cadence, not a single fixed inactivity threshold for everyone."
+  },
+  {
+    "id": 17,
+    "title": "Cohort retention",
+    "finding": "Cohort curves expose whether later customer vintages are becoming more or less loyal after acquisition.",
+    "business_action": "Compare retention by acquisition month and investigate offer, channel, or product-mix changes behind deterioration."
+  },
+  {
+    "id": 18,
+    "title": "Price-band productivity",
+    "finding": "Price-band mix shows whether growth is driven by unit volume, premium value, or zero-price activity.",
+    "business_action": "Balance conversion-friendly value products with premium attach opportunities and protect margin by band."
+  },
+  {
+    "id": 19,
+    "title": "Zero-price governance",
+    "finding": "There are 2,515 zero-price lines in the preserved ledger.",
+    "business_action": "Tag authorised samples/promotions and investigate all remaining zero-price activity as revenue leakage or master-data risk."
+  },
+  {
+    "id": 20,
+    "title": "Data-quality exposure",
+    "finding": "Missing CustomerID is the most prevalent quality flag in the summary.",
+    "business_action": "Treat data quality as a commercial KPI: improve capture at source while retaining an auditable exception layer."
+  },
+  {
+    "id": 21,
+    "title": "Product affinity",
+    "finding": "Item-based collaborative filtering produces five customer-behaviour neighbours for recommendation-ready products.",
+    "business_action": "Use high-similarity pairs in product pages, basket add-ons, and post-purchase journeys; A/B test uplift before full rollout."
+  }
+]
