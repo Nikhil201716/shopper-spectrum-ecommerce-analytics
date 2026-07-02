@@ -20,4 +20,4 @@ jobs:
       - name: Compile Python
         run: python -m compileall app.py src scripts
       - name: Run tests
-        run: pytest
+        run: python -m pytest
