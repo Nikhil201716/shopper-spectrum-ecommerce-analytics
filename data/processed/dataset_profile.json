@@ -15,6 +15,6 @@
   "net_revenue": 9748131.074000001,
   "selected_k": 4,
   "selected_k_silhouette": 0.3339182058421721,
-  "selected_k_inertia": 3925.2744726728542,
+  "selected_k_inertia": 3925.2744726728583,
   "selection_reason": "K=4 balances measured separation with four operationally distinct CRM treatments."
 }
