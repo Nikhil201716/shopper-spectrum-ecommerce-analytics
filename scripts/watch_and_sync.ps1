@@ -17,22 +17,19 @@ $watcher.IncludeSubdirectories = $true
 $watcher.NotifyFilter = [System.IO.NotifyFilters]'FileName, DirectoryName, LastWrite, Size'
 $watcher.EnableRaisingEvents = $true
 
-$script:dirty = $false
-$script:lastChange = Get-Date
-$action = {
-    $path = $Event.SourceEventArgs.FullPath
-    if ($path -match '\\.git\\|\\__pycache__\\|\\.pytest_cache\\|\\.venv\\|~$|\.tmp$|\.log$') {
-        return
-    }
-    $script:dirty = $true
-    $script:lastChange = Get-Date
-}
-
+$dirty = [bool](git status --porcelain)
+$lastChange = Get-Date
+$sourceIdentifiers = @(
+    "ShopperSpectrum.Changed",
+    "ShopperSpectrum.Created",
+    "ShopperSpectrum.Deleted",
+    "ShopperSpectrum.Renamed"
+)
 $subscriptions = @(
-    Register-ObjectEvent $watcher Changed -Action $action
-    Register-ObjectEvent $watcher Created -Action $action
-    Register-ObjectEvent $watcher Deleted -Action $action
-    Register-ObjectEvent $watcher Renamed -Action $action
+    Register-ObjectEvent $watcher Changed -SourceIdentifier $sourceIdentifiers[0]
+    Register-ObjectEvent $watcher Created -SourceIdentifier $sourceIdentifiers[1]
+    Register-ObjectEvent $watcher Deleted -SourceIdentifier $sourceIdentifiers[2]
+    Register-ObjectEvent $watcher Renamed -SourceIdentifier $sourceIdentifiers[3]
 )
 
 Write-Host "Watching $projectRoot"
@@ -41,15 +38,27 @@ Write-Host "Saved changes will be committed and pushed after $DebounceSeconds qu
 try {
     while ($true) {
         Start-Sleep -Seconds 2
-        if ($script:dirty -and ((Get-Date) - $script:lastChange).TotalSeconds -ge $DebounceSeconds) {
-            $script:dirty = $false
+        foreach ($pendingEvent in @(Get-Event -ErrorAction SilentlyContinue)) {
+            if ($pendingEvent.SourceIdentifier -notin $sourceIdentifiers) {
+                continue
+            }
+            $path = $pendingEvent.SourceEventArgs.FullPath
+            Remove-Event -EventIdentifier $pendingEvent.EventIdentifier -ErrorAction SilentlyContinue
+            if ($path -match '\\.git\\|\\__pycache__\\|\\.pytest_cache\\|\\.venv\\|~$|\.tmp$|\.log$') {
+                continue
+            }
+            $dirty = $true
+            $lastChange = Get-Date
+        }
+        if ($dirty -and ((Get-Date) - $lastChange).TotalSeconds -ge $DebounceSeconds) {
+            $dirty = $false
             try {
                 & $syncScript
             }
             catch {
                 Write-Warning $_
-                $script:dirty = $true
-                $script:lastChange = Get-Date
+                $dirty = $true
+                $lastChange = Get-Date
             }
         }
     }
@@ -60,4 +69,3 @@ finally {
     }
     $watcher.Dispose()
 }
-

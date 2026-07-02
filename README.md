@@ -4,6 +4,8 @@
 
 I am **Nikhil Sinha**, and I built Shopper Spectrum as an end-to-end retail decision system using Python, SQL, machine learning, data analysis, and Streamlit. I did not want this project to become a gallery of disconnected charts. Every analysis answers a commercial question, shows the underlying table, states the finding, and recommends a practical action.
 
+**Public repository:** https://github.com/Nikhil201716/shopper-spectrum-ecommerce-analytics
+
 The supplied data contains **541,909 transaction lines from 1 December 2022 to 9 December 2023**. My processed layer retains **100% of those rows**. Instead of deleting missing IDs, cancellations, returns, duplicate records, zero-price lines, or adjustments, I preserve them and add transparent quality flags and analytical eligibility rules.
 
 ## What the application includes
@@ -139,4 +141,3 @@ powershell -ExecutionPolicy Bypass -File scripts\watch_and_sync.ps1
 
 **Nikhil Sinha**  
 Shopper Spectrum — Customer Segmentation and Product Recommendations in E-Commerce
-
